@@ -1,9 +1,15 @@
 const express = require("express")
 const app = express()
 
-
+//banco de dados provisorio
+//importações
+const database = require("./src/infra/database")
+const LivroDAO = require("./dao/LivroDAO")
 const LivrosController = require("./src/controllers/LivrosController")
-const livrosController = new LivrosController()
+
+//instanciando
+const livroDAO = new LivroDAO(database)
+const livrosController = new LivrosController(livroDAO)
 
 app.use(express.json())
 

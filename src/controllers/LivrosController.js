@@ -17,6 +17,9 @@ class LivrosController{
         // inserir livros
         router.post ("/livros/", this.insertOneLivro);
 
+        // atualizar registro de um livro
+        router.put("/livros/:id", this.updateOneLivro)
+
     }
     getAllLivros = async (req, res) => {
         
@@ -58,19 +61,41 @@ class LivrosController{
             res.send("Nenhum livro com esse ID foi encontrado.")
         }
     }
-    insertOneLivro = (req, res) => {
-        let {nome,preco,autor,genero} = req.body;
-        //metodo para criar/post
-        livro.create({
-            nome: nome,
-            preco:preco,
-            autor:autor,
-            genero:genero
-        }).then((dados)=>{
-            res.send(dados)
-        }).catch(e=>{
-            res.sendStatus(e)
-        })
+    insertOneLivro = async (req, res) => {
+        try{
+            let {nome,preco,autor,genero} = req.body;
+            //metodo para criar/post
+            const dados = await livro.create({
+                nome: nome,
+                preco:preco,
+                autor:autor,
+                genero:genero
+            })
+            res.json(dados);
+        }catch(err){
+            console.log("algo de errado nao esta certo"+ err)
+            res.send("Por favor insira todos os campos: nome, preco, autor, genero")
+        }
+    }
+    updateOneLivro = async (req,res)=>{
+        try{
+            const id = req.params.id
+            let {nome,preco,autor,genero} = req.body;
+            //metodo para criar/post
+            const dados = await livro.update({
+                nome: nome,
+                preco:preco,
+                autor:autor,
+                genero:genero
+            },{
+            where: { "id": id
+                
+            }})
+            res.send("dados atualizados");
+        }catch(err){
+            console.log("algo de errado nao esta certo"+ err)
+            res.send("Por favor insira todos os campos: nome, preco, autor, genero")
+        }
     }
 
 }

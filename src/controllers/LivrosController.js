@@ -19,6 +19,9 @@ class LivrosController{
 
         // atualizar registro de um livro
         router.put("/livros/:id", this.updateOneLivro)
+        
+        // atualizar registro de um livro
+        router.delete("/livros/:id", this.deleteOneLivro)
 
     }
     getAllLivros = async (req, res) => {
@@ -91,10 +94,35 @@ class LivrosController{
             where: { "id": id
                 
             }})
-            res.send("dados atualizados");
+
+            //obs: nesse caso o dados é um array com um termo
+            //ele volta o status da query. Deu certo volta 1, se errado volta 0
+            console.log(dados) 
+
+            if(dados[0])res.send(`Livro de id= ${id} atualizado com sucesso`)
+            else res.send(`Nenhum Livro de id= ${id} foi atualizado`)
+
         }catch(err){
             console.log("algo de errado nao esta certo"+ err)
             res.send("Por favor insira todos os campos: nome, preco, autor, genero")
+        }
+    }
+    deleteOneLivro = async (req, res) => {
+        const id = req.params.id
+        try{
+            const dados = await livro.destroy({
+                where: {
+                    id:id
+                }
+            })//metodo do sequelize para deletar uma entrada
+            console.log(dados)
+            
+            //o dados é o resultado da query que pode ser 0 ou 1 se ela tiver falhado ou tiver sucesso
+            if(dados)res.send(`Livro de id= ${id} removido com sucesso`)
+            else res.send(`Nenhum Livro de id= ${id} foi encontrado`)
+        }catch(err){
+            console.log(`algo de errado nao esta certo com esse erro ${err}`)
+            res.send("Falha na deleção do dado")
         }
     }
 

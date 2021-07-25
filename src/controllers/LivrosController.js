@@ -1,30 +1,12 @@
-////importando o router
-const express = require("express");
-const router = express.Router();
 
 ///importando o Livro
 const livro = require("../models/LivrosModel")
 
-//
+//Classe com Métodos 
 class LivrosController{
-    constructor(router){
-        //todos os livros
-        router.get ("/livros", this.getAllLivros);
-        
-        //um livro
-        router.get ("/livros/:id", this.getOneLivro);
-
-        // inserir livros
-        router.post ("/livros/", this.insertOneLivro);
-
-        // atualizar registro de um livro
-        router.put("/livros/:id", this.updateOneLivro)
-        
-        // atualizar registro de um livro
-        router.delete("/livros/:id", this.deleteOneLivro)
-
-    }
-    getAllLivros = async (req, res) => {
+    
+     async getAllLivros(req, res)
+     {
         
         const livros = await livro.findAll()//metodo do sequelize para retornar tudo
         
@@ -40,7 +22,7 @@ class LivrosController{
         res.json(newLivros)
 
     }
-    getOneLivro = async (req, res) => {
+     async getOneLivro (req, res){
         const id = req.params.id
 
         console.log (id)
@@ -64,7 +46,7 @@ class LivrosController{
             res.send("Nenhum livro com esse ID foi encontrado.")
         }
     }
-    insertOneLivro = async (req, res) => {
+     async insertOneLivro (req, res) {
         try{
             let {nome,preco,autor,genero} = req.body;
             //metodo para criar/post
@@ -80,7 +62,7 @@ class LivrosController{
             res.send("Por favor insira todos os campos: nome, preco, autor, genero")
         }
     }
-    updateOneLivro = async (req,res)=>{
+      async updateOneLivro  (req,res){
         try{
             const id = req.params.id
             let {nome,preco,autor,genero} = req.body;
@@ -107,7 +89,7 @@ class LivrosController{
             res.send("Por favor insira todos os campos: nome, preco, autor, genero")
         }
     }
-    deleteOneLivro = async (req, res) => {
+    async deleteOneLivro(req, res)  {
         const id = req.params.id
         try{
             const dados = await livro.destroy({
@@ -127,7 +109,5 @@ class LivrosController{
     }
 
 }
-const livroController = new LivrosController(router)
-
-/////exportando as rotas do livro
-module.exports = router;
+//exportando a Classe Livro para Rotas
+module.exports = new LivrosController();

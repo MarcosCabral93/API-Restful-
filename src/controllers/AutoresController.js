@@ -1,17 +1,33 @@
+const autor = require("../models/AutorModel")
 class AutoresController {
-    construtor(router) {
-        //todos os autores
+    construtor() {
+        //Onde a instancia eh construida
     }
-    createAutor() {
-
+    createAutor = (req, res) => {
+        let { nome, nacionalidade } = req.body;
+        autor.create({
+            nome: nome,
+            nacionalidade: nacionalidade
+        }).then((dados) => {
+            res.send(dados)
+        }).catch(e => {
+            res.sendStatus(e)
+        })
     }
-    getAllAutores() {
-
+    getAllAutores = (req, res) => {
+        autor.findAll()
+            .then((dados) => {
+                res.json(dados)
+            })
+            .catch(e => {
+                res.sendStatus(e)
+            })
     }
-    patchAutor(autor_id) {
-
+    updateAutor(autor_id) {
+        //atualiza todos os autores
     }
     deleteAutor(autor_id) {
-
+        //deleta um autor especifico
     }
 }
+const autoresController = new AutoresController

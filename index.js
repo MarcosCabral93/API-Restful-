@@ -1,11 +1,15 @@
-const express = require("express")
+const express = require('express');
+const app = express();
 
-const app = express()
 
-app.get("/",(req,res)=>{
-    res.send("ola mundo parça. Monstro saiu da jaula")
-})
+const livrariaMostrar = require("./controllers/LivrosController");
+const db = require('./infra/sqlite-db');
 
-app.listen(3000,()=>{
-    console.log("O monstrao ta rodando bixo")
-})
+
+app.use(express.json());
+
+livrariaMostrar(app,db);
+
+app.listen(process.env.PORT3030, () => {
+    console.log(`Servidor rodando na porta:' ${process.env.PORT3030}`)
+  })

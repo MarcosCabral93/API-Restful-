@@ -1,5 +1,6 @@
 
 ///importando o Livro
+const autor = require("../models/AutorModel")
 const livro = require("../models/LivrosModel")
 
 //Classe com Métodos 
@@ -10,19 +11,20 @@ class LivrosController{
         
         const livros = await livro.findAll()//metodo do sequelize para retornar tudo
         console.log(livros);
-        res.json(livros)
+        // res.json(livros)
 
         //organizando informação para ser enviada como um JSON.
-        // const newLivros = livros.map((livro, i, arr)=>{
-        //     return{
-        //         "titulo":livro.nome,
-        //         //"autor":livro.autor,
-        //         // "gênero": livro.genero, 
-        //         "url": "http://localhost:3000/livros/"+livro.id} //url da requisição especifica do livro
-        // })
-        console.log(newLivros)
+        const newLivros = livros.map((livro, i, arr)=>{
+            return{
+                "titulo":livro.titulo,
+                "AutorId":livro.AutorId,
+                "AutorUrl":livro.AutorId?"http://localhost:3000/autores/"+livro.AutorId:null,
+                "genero": livro.genero, 
+                "url": "http://localhost:3000/livros/"+livro.id} //url da requisição especifica do livro
+        })
+        // console.log(newLivros)
+        // res.json(newLivros)
         res.json(newLivros)
-
     }
      async getOneLivro (req, res){
         const id = req.params.id
@@ -30,32 +32,37 @@ class LivrosController{
         console.log (id)
         try{
             
-            const dados = await livro.findAll({
-                where:{
-                    "id":id
-                }
-            })//metodo do sequelize para retornar tudo
-        
+            const dados = await livro.findByPk(id)//metodo do sequelize para apenas o item com PK especificada
+            
+            const autorCheck = await autor.findByPk(dados.AutorId)
+
+            console.log(autorCheck)
             console.log(dados)
+            // res.json(dados)
             res.json({  
-                "id": dados[0]["id"],
-                "titulo": dados[0]["titulo"],
-                "preco": dados[0]["preco"],
-                "autorID": dados[0]["AutorID"],
-                "genero": dados[0]["genero"]})    
+                "id": dados["id"],
+                "titulo": dados["titulo"],
+                "preco": dados["preco"],
+                "genero": dados["genero"],
+                "Autor": autorCheck
+            })    
         }catch(err){
-            console.log("Algo de errado nao está certo"+err)
+            console.log("Algo de errado nao está certo "+err)
             res.send("Nenhum livro com esse ID foi encontrado.")
         }
     }
      async insertOneLivro (req, res) {
         try{
-            let {titulo,preco,AutorID,genero} = req.body;
+            let {titulo,preco,AutorId,genero} = req.body;
             //metodo para criar/post
+            const autorCheck = await autor.findByPk(AutorId)
+            console.log(autorCheck)
+
+            // console.log(titulo,preco,AutorID,genero)
             const dados = await livro.create({
                 titulo: titulo,
                 preco:preco,
-                AutorID:AutorID,
+                AutorId:AutorId,
                 genero:genero
             })
             res.json(dados);

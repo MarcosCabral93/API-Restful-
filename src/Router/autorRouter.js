@@ -1,14 +1,13 @@
 const router=require('express').Router()
 
 
-const autoresController = require('../controllers/AutorController')
+const autorController = require('../controllers/AutorController')
 
 
 router
-
-
-
-//Autores
-.get("/autores", autoresController.getAllAutores)
-.post("/autores", autoresController.createAutor)
+.get("/autores/:id",autorController.getOneAutor)
+.get("/autores", autorController.getAllAutores)
+.post("/autores", autorController.createAutor)
+.put("/autores/:id",autorController.updateAutor)
+.delete("/autores/:id",autorController.deleteAutor)
 module.exports=router

@@ -1,7 +1,7 @@
-
 ///importando o Livro
 const autor = require("../models/AutorModel")
 const livro = require("../models/LivrosModel")
+// const livro_genero = require("../models/Livro_GeneroModel")
 
 //Classe com Métodos 
 class LivrosController{
@@ -9,21 +9,26 @@ class LivrosController{
      async getAllLivros(req, res)
      {
         
-        const livros = await livro.findAll()//metodo do sequelize para retornar tudo
-        console.log(livros);
+        // const livros = await livro.findAll()//metodo do sequelize para retornar tudo
+        // console.log(livros);
         // res.json(livros)
 
         //organizando informação para ser enviada como um JSON.
-        const newLivros = livros.map((livro, i, arr)=>{
-            return{
-                "titulo":livro.titulo,
-                "AutorId":livro.AutorId,
-                "AutorUrl":livro.AutorId?"http://localhost:3000/autores/"+livro.AutorId:null,
-                "genero": livro.genero, 
-                "url": "http://localhost:3000/livros/"+livro.id} //url da requisição especifica do livro
-        })
+        // const newLivros = livros.map((livro, i, arr)=>{
+        //     return{
+        //         "titulo":livro.titulo,
+        //         "AutorId":livro.AutorId,
+        //         "AutorUrl":livro.AutorId?"http://localhost:3000/autores/"+livro.AutorId:null,
+        //         // "genero": livro.genero, 
+        //         "url": "http://localhost:3000/livros/"+livro.id} //url da requisição especifica do livro
+        // })
         // console.log(newLivros)
         // res.json(newLivros)
+        
+        const newLivros = await livro.findAll({
+            include:{ association: autor}
+        })
+        
         res.json(newLivros)
     }
      async getOneLivro (req, res){
@@ -53,17 +58,22 @@ class LivrosController{
     }
      async insertOneLivro (req, res) {
         try{
-            let {titulo,preco,AutorId,genero} = req.body;
+            let {titulo,preco,AutorId,genero, capaURL} = req.body;
             //metodo para criar/post
             const autorCheck = await autor.findByPk(AutorId)
             console.log(autorCheck)
-
-            // console.log(titulo,preco,AutorID,genero)
+            // const generoCheck = await livro_genero.findAll({
+            //     where: Sequelize.or({
+            //         GeneroId : genero
+            //     })
+            // })
+            // console.log(generoCheck)
             const dados = await livro.create({
                 titulo: titulo,
                 preco:preco,
                 AutorId:AutorId,
-                genero:genero
+                // genero:genero,
+                capaURL: capaURL
             })
             res.json(dados);
         }catch(err){

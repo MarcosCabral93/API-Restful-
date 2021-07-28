@@ -7,7 +7,7 @@ class GeneroController{
      async getAllGenero(req, res)
      {
         
-        const Genero = await Genero.findAll()//metodo do sequelize para retornar tudo
+        const newGenero = await Genero.findAll()//metodo do sequelize para retornar tudo
         console.log(Genero);
         // res.json(livros)
 
@@ -19,20 +19,20 @@ class GeneroController{
        
         try{
             
-            const dados = await livro.findByPk(id)//metodo do sequelize para apenas o item com PK especificada
+            const dados = await Genero.findByPk(id)//metodo do sequelize para apenas o item com PK especificada
             
-            const autorCheck = await autor.findByPk(dados.AutorId)
+            // const autorCheck = await autor.findByPk(dados.AutorId)
 
-            console.log(autorCheck)
             console.log(dados)
+            res.json(dados) 
             // res.json(dados)
-            res.json({  
-                "id": dados["id"],
-                "titulo": dados["titulo"],
-                "preco": dados["preco"],
-                "genero": dados["genero"],
-                "Autor": autorCheck
-            })    
+            // res.json({  
+            //     "id": dados["id"],
+            //     "titulo": dados["titulo"],
+            //     "preco": dados["preco"],
+            //     "genero": dados["genero"],
+            //     "Autor": autorCheck
+            // })    
         }catch(err){
             console.log("Algo de errado nao está certo "+err)
             res.send("Nenhum livro com esse ID foi encontrado.")
@@ -42,8 +42,11 @@ class GeneroController{
         try{
             let {genero} = req.body;
             //metodo para criar/post
-            const autorCheck = await autor.findByPk(AutorId)
-            console.log(autorCheck)
+            //const autorCheck = await Genero.findByPk(AutorId)
+            
+            const dados = Genero.create({
+                "genero": genero
+            })
 
             
             res.json(dados);
@@ -55,13 +58,11 @@ class GeneroController{
       async updateOneGenero  (req,res){
         try{
             const id = req.params.id
-            let {nome,preco,autor,genero} = req.body;
+            let {genero} = req.body;
             //metodo para criar/post
-            const dados = await livro.update({
-                nome: nome,
-                preco:preco,
-                //autor:autor,
-                genero:genero
+            const dados = await Genero.update({
+                "genero": genero,
+                
             },{
             where: { "id": id
                 
@@ -82,7 +83,7 @@ class GeneroController{
     async deleteOneGenero(req, res)  {
         const id = req.params.id
         try{
-            const dados = await livro.destroy({
+            const dados = await Genero.destroy({
                 where: {
                     id:id
                 }

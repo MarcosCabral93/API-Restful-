@@ -1,6 +1,7 @@
 //importando o banco de dados
 const Sequelize=require('sequelize')//o const Sequelize é uma classe.
 const db=require("../infra/db")
+const Livro = require("./LivrosModel")
 
 
 
@@ -11,6 +12,5 @@ const Genero=db.define("Genero",{//const Livro é a Tabela, db.Livraria é a ins
         type: Sequelize.STRING,
         allowNull: false
     }})
-    
 
 module.exports=Genero;

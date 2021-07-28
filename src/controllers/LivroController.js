@@ -1,7 +1,7 @@
 
 ///importando o Livro
 const autor = require("../models/AutorModel")
-const livro = require("../models/LivrosModel")
+const livro = require("../models/LivroModel")
 
 //Classe com Métodos 
 class LivrosController{

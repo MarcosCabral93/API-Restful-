@@ -1,7 +1,7 @@
 const router=require('express').Router()
 
-const livroController = require('../controllers/LivrosController')
-const autoresController = require('../controllers/AutoresController')
+
+const autoresController = require('../controllers/AutorController')
 
 
 router

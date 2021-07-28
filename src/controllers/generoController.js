@@ -1,5 +1,5 @@
 ///importando o Livro
-const Genero = require("../models/generoModel")
+const Genero = require("../models/GeneroModel")
 
 //Classe com Métodos 
 class GeneroController{

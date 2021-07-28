@@ -1,14 +1,12 @@
- const livros = require('./livroRouter')
+const express=require('express')
 const genero = require ('./generoRouter')
-
- const express=require('express')
-
- 
+const livro = require('./livroRouter')
+const autor =require('./autorRouter')
  module.exports = app => {
     app.use(
     express.json(),
-      livros,
-      //autor,
+      livro,
+      autor,
       genero
      
     )

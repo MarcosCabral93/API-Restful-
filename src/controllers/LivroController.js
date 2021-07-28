@@ -4,7 +4,7 @@ const autor = require("../models/AutorModel")
 const livro = require("../models/LivroModel")
 
 //Classe com Métodos 
-class LivrosController{
+class LivroController{
     
      async getAllLivros(req, res)
      {
@@ -17,8 +17,8 @@ class LivrosController{
         const newLivros = livros.map((livro, i, arr)=>{
             return{
                 "titulo":livro.titulo,
-                "AutorId":livro.AutorId,
-                "AutorUrl":livro.AutorId?"http://localhost:3000/autores/"+livro.AutorId:null,
+                "autorId":livro.autorId,
+                "AutorUrl":livro.autorId?"http://localhost:3000/autores/"+livro.autorId:null,
                 "genero": livro.genero, 
                 "url": "http://localhost:3000/livros/"+livro.id} //url da requisição especifica do livro
         })
@@ -34,7 +34,7 @@ class LivrosController{
             
             const dados = await livro.findByPk(id)//metodo do sequelize para apenas o item com PK especificada
             
-            const autorCheck = await autor.findByPk(dados.AutorId)
+            const autorCheck = await autor.findByPk(dados.autorId)
 
             console.log(autorCheck)
             console.log(dados)
@@ -53,16 +53,16 @@ class LivrosController{
     }
      async insertOneLivro (req, res) {
         try{
-            let {titulo,preco,AutorId,genero} = req.body;
+            let {titulo,preco,autorId,genero} = req.body;
             //metodo para criar/post
-            const autorCheck = await autor.findByPk(AutorId)
+            const autorCheck = await autor.findByPk(autorId)
             console.log(autorCheck)
 
-            // console.log(titulo,preco,AutorID,genero)
+            // console.log(titulo,preco,autorId,genero)
             const dados = await livro.create({
                 titulo: titulo,
                 preco:preco,
-                AutorId:AutorId,
+                autorId:autorId,
                 genero:genero
             })
             res.json(dados);
@@ -119,4 +119,4 @@ class LivrosController{
 
 }
 //exportando a Classe Livro para Rotas
-module.exports = new LivrosController();
+module.exports = new LivroController();

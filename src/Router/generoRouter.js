@@ -1,5 +1,5 @@
 const router=require('express').Router()
-
+//
 const generoController=require('../controllers/GeneroController')
 
 

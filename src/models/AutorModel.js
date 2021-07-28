@@ -2,7 +2,7 @@
     const db = require("../infra/db")
     const Sequelize = require('sequelize')
         //criando a tabela autor chamando a função define
-    const Autor = db.define("Autor", {
+    const Autor = db.define("autor", {
 
         nome: {
             type: Sequelize.STRING,

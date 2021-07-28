@@ -1,43 +1,29 @@
 ///importando o Livro
-const Genero = require("../models/generoModel")
+const Genero = require("../models/GeneroModel")
 
 //Classe com Métodos 
 class GeneroController{
     
      async getAllGenero(req, res)
      {
-        
-        const newGenero = await Genero.findAll()//metodo do sequelize para retornar tudo
-        console.log(Genero);
-        // res.json(livros)
-
-                res.json(newGenero)
-    }
-     async getOneGenero (req, res){
-        const id = req.params.id
-
-       
-        try{
-            
-            const dados = await Genero.findByPk(id)//metodo do sequelize para apenas o item com PK especificada
-            
-            // const autorCheck = await autor.findByPk(dados.AutorId)
-
-            console.log(dados)
-            res.json(dados) 
-            // res.json(dados)
-            // res.json({  
-            //     "id": dados["id"],
-            //     "titulo": dados["titulo"],
-            //     "preco": dados["preco"],
-            //     "genero": dados["genero"],
-            //     "Autor": autorCheck
-            // })    
+        try{        
+        const generos = await Genero.findAll()//metodo do sequelize para retornar tudo
+        res.json(generos)
         }catch(err){
-            console.log("Algo de errado nao está certo "+err)
-            res.send("Nenhum livro com esse ID foi encontrado.")
+            res.send(err)
         }
     }
+
+     async getOneGenero (req, res){
+        const id = req.params.id
+        try{
+            const dados = await genero.findByPk(id)//metodo do sequelize para apenas o item com PK especificada
+            res.json(dados)    
+        }catch(err){
+          res.send("Nenhum livro com esse ID foi encontrado."+err)
+        }
+    }
+    
      async insertOneGenero (req, res) {
         try{
             let {genero} = req.body;

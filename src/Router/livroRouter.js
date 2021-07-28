@@ -1,6 +1,6 @@
 const router=require('express').Router()
 
-const livroController=require('../controllers/LivrosController')
+const livroController=require('../controllers/LivroController')
 
 
 router

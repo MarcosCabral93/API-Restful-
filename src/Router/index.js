@@ -1,5 +1,4 @@
  const livros = require('./livroRouter')
- const autor = require('./autorRouter')
 const genero = require ('./generoRouter')
 
  const express=require('express')
@@ -9,7 +8,7 @@ const genero = require ('./generoRouter')
     app.use(
     express.json(),
       livros,
-      autor,
+      //autor,
       genero
      
     )

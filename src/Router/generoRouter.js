@@ -5,18 +5,18 @@ const generoController=require('../controllers/GeneroController')
 
 router
 
-.get ("/genero", generoController.getAllGenero)
+.get ("/generos", generoController.getAllGenero)
         
 //um genero
 
-.get ("/genero/:id", generoController.getOneGenero)
+.get ("/generos/:id", generoController.getOneGenero)
 
 // inserir genero
-.post ("/genero/", generoController.insertOneGenero)
+.post ("/generos/", generoController.insertOneGenero)
 
 // atualizar registro de um genero
-.put("/genero/:id", generoController.updateOneGenero)
+.put("/generos/:id", generoController.updateOneGenero)
 
 // deletar registro de um genero
-.delete("/genero/:id", generoController.deleteOneGenero)
+.delete("/generos/:id", generoController.deleteOneGenero)
 module.exports=router

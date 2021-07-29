@@ -3,12 +3,12 @@ class AutorController {
     
     createAutor = (req, res) => {
         let { nome, nacionalidade } = req.body;
-        console.log(nome, nacionalidade)
+
         autor.create({
             nome: nome,
             nacionalidade: nacionalidade
         }).then((dados) => {
-            res.json(dados)
+            res.status(201).json(dados)
         }).catch(e => {
             res.sendStatus(e)
         })
@@ -17,9 +17,10 @@ class AutorController {
         const id = req.params.id
         try{
             const dados = await autor.findByPk(id)//metodo do sequelize para apenas o item com PK especificada
+            if(!dados) throw new Error("id inválido")
             res.json(dados)    
         }catch(err){
-          res.send("Nenhum autor com esse ID foi encontrado."+err)
+          res.status(404).send("Nenhum autor com esse ID foi encontrado."+err)
         }
     }
     
@@ -66,11 +67,11 @@ async deleteAutor(req, res) {
             }) //metodo sequelize para deletar
 
         if (dados) res.send(`Autor de id=${id} removido com sucesso`)
-        else res.send(`Nenhum livro de id= foi encontrado`)
+        else res.status(204).send(`Nenhum livro de id= foi encontrado`)
 
     } catch (err) {
         console.log(`Algo deu errado no erro ${id}`)
-        res.send("Falha na deleção do autor")
+        res.status(404).send("Falha na deleção do autor")
     }
 }
 }

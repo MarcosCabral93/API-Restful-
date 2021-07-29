@@ -316,7 +316,7 @@ localhost:3000/livros/1
     "titulo": "Astro Boy",
     "preco": 35,
     "autorId": 7,
-    "generos":[4,5],
+    "generos": [4,5],
     "capaURL": "https://th.bing.com/th/id/OIP.6Miup3mOMLt7UwJ9hhVo7gHaJq?pid=ImgDet&rs=1"
 }
  ```

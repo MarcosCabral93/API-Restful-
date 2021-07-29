@@ -1,372 +1,379 @@
-![Alt ou título da imagem](https://camo.githubusercontent.com/dfc69d704694f22168bea3d84584663777fa5301dcad5bbcb5459b336da8d554/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d3433383533443f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465)
-![Alt ou título da imagem](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![alt ou título da imagem](https://camo.githubusercontent.com/dfc69d704694f22168bea3d84584663777fa5301dcad5bbcb5459b336da8d554/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d3433383533443f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465)
+![alt ou título da imagem](https://img.shields.io/badge/javascript-323330?style=for-the-badge&logo=javascript&logocolor=f7df1e)
 
-# LIVRARIA_API 
+# LIVRARIA_API
 #
 
-## A SOLUÇÃO DE ESTOQUE PARA SUA LIVRARIA!
-## COM O LIVRARIA API VOCÊ PODE GERENCIAR O ESTOQUE DE LIVROS!
+## A solução de estoque para sua livraria!
+## Com o livraria api você pode gerenciar o estoque de livros!
 
 
 
 ## As dependencias utilizadas no projeto foram:
-- ![Alt ou título da imagem](https://camo.githubusercontent.com/6f61ce982d7a61713d63c947148300012945bd4a4cafb8b9313e2426c5a1f273/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f457870726573732e6a732d3430344435393f7374796c653d666f722d7468652d6261646765)
-- ![Alt ou título da imagem](https://camo.githubusercontent.com/0a4aff6e255d17730282bc6b00ed6c73a3f09bca95365a4f5d73462106f8a789/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d53657175656c697a6526636f6c6f723d323232323232266c6f676f3d53657175656c697a65266c6f676f436f6c6f723d353242304537266c6162656c3d)
-- ![Alt ou título da imagem](https://camo.githubusercontent.com/932123bf240349f3785c02228b113b06299079e8740f480c767e8335fd6d752a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f53514c6974652d3037343035453f7374796c653d666f722d7468652d6261646765266c6f676f3d73716c697465266c6f676f436f6c6f723d7768697465)
-- ![Alt ou título da imagem](https://img.shields.io/badge/Cors-%20-yellowgreen)
-- ![Alt ou título da imagem](https://img.shields.io/badge/Nodemon-green)
+- ![alt ou título da imagem](https://camo.githubusercontent.com/6f61ce982d7a61713d63c947148300012945bd4a4cafb8b9313e2426c5a1f273/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f457870726573732e6a732d3430344435393f7374796c653d666f722d7468652d6261646765)
+- ![alt ou título da imagem](https://camo.githubusercontent.com/0a4aff6e255d17730282bc6b00ed6c73a3f09bca95365a4f5d73462106f8a789/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d53657175656c697a6526636f6c6f723d323232323232266c6f676f3d53657175656c697a65266c6f676f436f6c6f723d353242304537266c6162656c3d)
+- ![alt ou título da imagem](https://camo.githubusercontent.com/932123bf240349f3785c02228b113b06299079e8740f480c767e8335fd6d752a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f53514c6974652d3037343035453f7374796c653d666f722d7468652d6261646765266c6f676f3d73716c697465266c6f676f436f6c6f723d7768697465)
+- ![alt ou título da imagem](https://img.shields.io/badge/cors-%20-yellowgreen)
+- ![alt ou título da imagem](https://img.shields.io/badge/nodemon-green)
 
-## INICIANDO O PROJETO NA SUA MAQUINA
-### TER CERTEZA QUE ESTÁ NESSE REPOSITÓRIO
-### CONSIDERANDO QUE VOCÊ JA TEM O GIT NA SUA MAQUINA
-- CRIE UMA PASTA NA AREA DE TRABALHO COM NOME LIVRARIA
-- NO CMD ( PROMPT DE COMANDO ) OU POWERSHELL DIGITE
-- `cd /users\user\desktop\livraria` <<< ONDE \user provavelmente seu nome de usuario do windows.
-#### EXECUTE OS COMANDOS ABAIXO AINDA NO CMD OU POWERSHELL
+## Iniciando o projeto na sua maquina
+### Ter certeza que está nesse repositório
+### Tonsiderando que você ja tem o git na sua maquina
+- crie uma pasta na area de trabalho com nome livraria
+- no cmd ( prompt de comando ) ou powershell digite
+- `cd /users\user\desktop\livraria` <<< onde \user provavelmente seu nome de usuario do windows.
+#### Execute os comandos abaixo ainda no cmd ou powershell
 - ` git init`
-- `git clone https://github.com/PATOLINODD/livraria_API.git` << FAZ O DOWNLOAD DE TODOS OS ARQUIVO NA SUA MAQUINA
+- `git clone https://github.com/patolinodd/livraria_api.git` << faz o download de todos os arquivo na sua maquina
 - `cd livraria_api`
 
-### AGORA VAMOS PREPARAR O AMBIENTE PARA EXECUÇÃO!
-#### NO CMD ( PROMPT DE COMANDO ) OU POWERSHELL
+### Egora vamos preparar o ambiente para execução
+#### no cmd, terminal ou powershell
 - `cd livraria_api` << vai para a pasta livraria_api
-- `npm init -y` << para iniciar o nosso arquivo package.json com nossas dependencias
+- `npm init -y` << para iniciar o nosso arquivo package.json com dependencias do projeto
 - `npm install` << para instalar todas as dependecias
 
-## AGORA VOCÊ TEM TODOS OS ARQUIVOS NA SUA MAQUINA E PRONTO PARA USA-LO!!
-### SE VOCÊ NÃO TEM O INSOMNIA RECOMENDO QUE FAÇA O DOWNLOAD DELE NA SUA MAQUINA!
+## Agora você tem todos os arquivos na sua maquina e pronto para usa-lo!!
+### se você não tem o insomnia recomendo que faça o download dele na sua maquina!
 
-- [DOWNLOAD INSOMNIA](https://insomnia.rest/download)
+- [download insomnia](https://insomnia.rest/download)
 
 
-### AGORA VOCÊ TEM TUDO PRA USAR LIVRARIA_API NA SUA MAQUINA!!
-#### APOSTO QUE ESTAVA ANSIOSO!! RSRS 
-### VAMOS COMEÇAR!!?
-### NO CMD ( PROMPT DE COMANDO ) OU POWERSHELL
-#### PARA RODAR O LIVRARIA API
+### agora você tem tudo pra usar livraria_api na sua maquina!!
+
+### vamos começar!!?
+### no cmd, terminal ou powershell
+#### para rodar o livraria api
 - ` npm start `
 
 
-- ABRINDO O INSOMNIA VOCÊ VERÁ ALGO DO TIPO
+- abrindo o insomnia você verá algo do tipo
 
 
-| Filter    | + v      |
+| filter    | + v      |
 | :-------- | :------- |
 
-- CLIQUE NO SINAL DE SOMA ( + )
-- ESCOLHA >> New Request
-- VOCÊ VERA ALGO PARECIDO COM O EXEMPLO ABAIXO!
+- clique no sinal de soma ( + )
+- escolha >> new request
+- você vera algo parecido com o exemplo abaixo!
 
-| **Name** ( _defaul to your request URL if left empty_ )|        |
+| **name** ( _defaul to your request url if left empty_ )|        |
 | :-----------------------------------------------       | :----- |
-| My Request                                             |  GET   |
-|                                                        | Create |
+| my request                                             |  get   |
+|                                                        | create |
 
-- CLICANDO EM GET VOCÊ PODERÁ ESCOLHER QUALQUER UM ENTRE OS QUAIS USAMOS NESSA LIVRARIA
-- ![GET](https://img.shields.io/badge/GET-purple.svg)
-- ![POST](https://img.shields.io/badge/POST-green.svg)
-- ![PUT](https://img.shields.io/badge/PUT-orange.svg)
-- ![DELETE](https://img.shields.io/badge/DELETE-red.svg)
-- VAMOS USAR O GET PRIMEIRO DEPOIS É SÓ CLICAR EM **Create**
-
-
+- clicando em get você poderá escolher qualquer um entre os quais usamos nessa livraria
+- ![get](https://img.shields.io/badge/get-purple.svg)
+- ![post](https://img.shields.io/badge/post-green.svg)
+- ![put](https://img.shields.io/badge/put-orange.svg)
+- ![delete](https://img.shields.io/badge/delete-red.svg)
+- vamos usar o get primeiro depois é só clicar em **create**
 
 
 
-# USANDO O ![GET](https://img.shields.io/badge/GET-purple.svg)
 
-#### AGORA VOCÊ DEVE ESTAR VENDO ALGO DO TIPO
 
-| GET  | `https://api.myproduct.com/v1/users` | SEND |
+# usando o ![get](https://img.shields.io/badge/get-purple.svg)
+
+#### agora você deve estar vendo algo do tipo
+
+| get  | `https://api.myproduct.com/v1/users` | send |
 | :--  | :---------------------------------   | :--- |
-| BODY |                                      |      |
+| body |                                      |      |
 
-- CLIQUE EM BODY E ESCOLHA O JSON
-- PARA FAZER A CONSULTA DOS AUTORES QUE EXISTEM, COLE EM CIMA DESSA URL O LINK ABAIXO E CLIQUE NO SEND
+- clique em body e escolha o json
+- para fazer a consulta dos autores que existem, cole em cima dessa url o link abaixo e clique no send
 ```http
 http://localhost:3000/autores 
 ```
-- O RESULTADO DEVE SER ALGO DO TIPO
+- o resultado deve ser algo do tipo
 ```json
 [
   {
     "id": 2,
-    "nome": "HP Lovecraft",
-    "nacionalidade": "Americano",
-    "createdAt": "2021-07-29T00:58:06.380Z",
-    "updatedAt": "2021-07-29T00:58:06.380Z"
+    "nome": "hp lovecraft",
+    "nacionalidade": "americano",
+    "createdat": "2021-07-29t00:58:06.380z",
+    "updatedat": "2021-07-29t00:58:06.380z"
   },
   {
     "id": 3,
-    "nome": "Jose Saramago",
-    "nacionalidade": "Portugues",
-    "createdAt": "2021-07-29T01:01:35.464Z",
-    "updatedAt": "2021-07-29T01:01:35.464Z"
+    "nome": "jose saramago",
+    "nacionalidade": "portugues",
+    "createdat": "2021-07-29t01:01:35.464z",
+    "updatedat": "2021-07-29t01:01:35.464z"
   }
 ]
 ```
 
-- PARA FAZER A CONSULTA DE UM AUTOR EXISTENTE
+- para fazer a consulta de um autor existente
 ```http
 http://localhost:3000/autores/1 ou 2
 ```
-- NOTE QUE O NUMERO 1 ou 2 É O ID DO AUTOR
+- note que o numero 1 ou 2 é o id do autor
 
-# USANDO O ![POST](https://img.shields.io/badge/POST-green.svg)
-### AGORA VOCÊ SABE QUAIS AUTORE EXISTEM
-### VAMOS POR MAIS NO REGISTRO??
-- PARA INSERIR UM NOVO AUTOR, A ROTA É O MESMO LINK
+# usando o ![post](https://img.shields.io/badge/post-green.svg)
+### agora você sabe quais autore existem
+### vamos por mais no registro??
+- para inserir um novo autor, a rota é o mesmo link
 ```http
 http://localhost:3000/autores
 ```
-- DENTRO DO INSOMNIA, ABAIXO DO JSON VAMOS COLAR ESSE NOVO AUTOR!
+- dentro do insomnia, abaixo do json vamos colar esse novo autor!
 ```json
 {
-"nome": "Ozamu Tesuca",
-"nacionalidade": "Japão"
+"nome": "ozamu tesuca",
+"nacionalidade": "japão"
 }
 ```
-- VOCÊ DEVE TER VISTO AO LADO ALGO ASSIM:
+- você deve ter visto ao lado algo assim:
 ```json
 {
   "id": 7,
-  "nome": "Ozamu Tesuca",
-  "nacionalidade": "Japão",
-  "updatedAt": "2021-07-29T06:54:26.630Z",
-  "createdAt": "2021-07-29T06:54:26.630Z"
+  "nome": "ozamu tesuca",
+  "nacionalidade": "japão",
+  "updatedat": "2021-07-29t06:54:26.630z",
+  "createdat": "2021-07-29t06:54:26.630z"
 }
 ```
-### OPA! ACHO QUE ERREI O NOME DO AUTOR
-### VAMOS ATUALIZAR!?
-# USANDO O ![PUT](https://img.shields.io/badge/PUT-orange.svg)
-- VAMOS PEGAR O ID DO AUTOR QUE QUEREMOS ATUALIZAR?
+### opa! acho que errei o nome do autor
+### vamos atualizar!?
+# usando o ![put](https://img.shields.io/badge/put-orange.svg)
+- vamos pegar o id do autor que queremos atualizar?
 ```http
 http://localhost:3000/autores/7
 ```
-- AGORA ACREDITO QUE ESTÁ CERTO!
+- agora acredito que está certo!
 ```json
 {
-"nome": "Osamu Tezuka",
-"nacionalidade": "Japão"
+"nome": "osamu tezuka",
+"nacionalidade": "japão"
 }
 ```
-### É! TUDO PARECE PERFETO, NÉ!? 
-### MAS EU QUERO DELETAR UNS AUTORES QUE JÁ SAIRAM DA MINHA LIVRARIA
 
-# USANDO O ![DELETE](https://img.shields.io/badge/DELETE-red.svg)
-### NÃO VAMOS DELETAR O Osamu Tezuka VAMOS PRECISAR DELE MAIS PRA FRENTE!
-### MESMA ETAPA MAS O METODO É DELETE.
+### mas e se quiser deletar uns autores que já sairam da minha livraria?
 
-- ROTA PARA APAGAR O AUTOR E CLIQUE NO SEND
+# usando o ![delete](https://img.shields.io/badge/delete-red.svg)
+### não vamos deletar o osamu tezuka vamos precisar dele mais pra frente!
+### mesma etapa mas o metodo é delete.
+
+- rota para apagar o autor e clique no send
  ```http
  localhost:3000/autores/1 ou 2
 ```
-- **CUIDADO, TENHA CERTEZA QUE VOCÊ VAI APAGAR O AUTOR CORRETO!**
+- **cuidado, tenha certeza que você vai apagar o autor correto!**
 
-# VAMOS VER QUAIS GENEROS EXISTEM NO REGISTRO??
-### VAMOS USAR O METODO ![GET](https://img.shields.io/badge/GET-purple.svg) E A ROTA É O LINK ABAIXO
+# vamos ver quais generos existem no registro??
+### vamos usar o metodo ![get](https://img.shields.io/badge/get-purple.svg) e a rota é o link abaixo
 ```http
 localhost:3000/genero
 ```
-- DEVE VER ALGUM RESULTADO ASSIM
+- deve ver algum resultado assim
 ```json
 [
   {
     "id": 1,
-    "genero": "Romance",
-    "createdAt": "2021-07-29T00:45:29.254Z",
-    "updatedAt": "2021-07-29T00:45:29.254Z"
+    "genero": "romance",
+    "createdat": "2021-07-29t00:45:29.254z",
+    "updatedat": "2021-07-29t00:45:29.254z"
   },
   {
     "id": 2,
-    "genero": "Fantasia",
-    "createdAt": "2021-07-29T00:45:42.407Z",
-    "updatedAt": "2021-07-29T00:45:42.407Z"
+    "genero": "fantasia",
+    "createdat": "2021-07-29t00:45:42.407z",
+    "updatedat": "2021-07-29t00:45:42.407z"
   },
   {
     "id": 3,
-    "genero": "Medieval",
-    "createdAt": "2021-07-29T00:45:49.266Z",
-    "updatedAt": "2021-07-29T00:45:49.266Z"
+    "genero": "medieval",
+    "createdat": "2021-07-29t00:45:49.266z",
+    "updatedat": "2021-07-29t00:45:49.266z"
   },
   {
     "id": 4,
-    "genero": "Aventura",
-    "createdAt": "2021-07-29T00:52:41.340Z",
-    "updatedAt": "2021-07-29T00:52:41.340Z"
+    "genero": "aventura",
+    "createdat": "2021-07-29t00:52:41.340z",
+    "updatedat": "2021-07-29t00:52:41.340z"
   }
 ]
 ```
-- GRAVE BEM OS IDs DOS GENEROS, VAMOS PRECISAR
+- grave bem os ids dos generos, vamos precisar
 
-# USANDO O ![POST](https://img.shields.io/badge/POST-green.svg)
-- LINK PARA O POST É O MSM DO ANTERIOR MAS O METODO É ![POST](https://img.shields.io/badge/POST-green.svg)
+# Usando o ![post](https://img.shields.io/badge/post-green.svg)
+- Link para o post é o msm do anterior mas o metodo é ![post](https://img.shields.io/badge/post-green.svg)
 ```http
 localhost:3000/genero
 ```
-- E VAMOS ADICIONAR UM GENERO!
+- E vamos adicionar um genero!
 ```json
 {
- "genero": "Acão"
+ "genero": "acão"
 }
 ```
-- VOCÊ DEVE VER ALGO DO TIPO
+- Você deve ver algo do tipo
 ```http
 {
   "id": 5,
-  "genero": "Acão",
-  "updatedAt": "2021-07-29T07:36:27.141Z",
-  "createdAt": "2021-07-29T07:36:27.141Z"
+  "genero": "acão",
+  "updatedat": "2021-07-29t07:36:27.141z",
+  "createdat": "2021-07-29t07:36:27.141z"
 }
 ```
-### OPA! ACHO QUE EU ERREI O NOME AÇÃO, E COLOQUEI ACÃO
-### É, ACHO QUE DEVEMOS ATUALIZAR ISSO AI
-# USANDO O ![PUT](https://img.shields.io/badge/PUT-orange.svg)
+### E se for preciso atualizar algum campo?
+### Para isso usaremos o método:
+# ![put](https://img.shields.io/badge/put-orange.svg)
 
-- ROTA PARA ATUALIZAR
+- rota para atualizar
 ```http
 localhost:3000/genero/5
 ```
-- AGORA SIM EU ACERTEI! RSRSRS
+- Agora sim!
 ```json
 	{
-		"genero": "Ação"
+		"genero": "ação"
 	}
 ```
-# USANDO O ![DELETE](https://img.shields.io/badge/DELETE-red.svg)
-### EU NÃO SOU MUITO FÃ DO GENERO ROMANTICO
-ENTÃO VAMOS DELETAR ELE!
-- ROTA QUE VAI DELETAR
+# Usando o ![delete](https://img.shields.io/badge/delete-red.svg)
+### eu não sou muito fã do genero romantico
+então vamos deletar ele!
 ```http
 localhost:3000/genero/1
 ```
-- OK, O ROMANCE FOI DELETADO
+- ok, o romance foi deletado
 
-# AGORA VAMOS VER OS LIVROS!!
+# Agora vamos ver os livros!!
 #
-# USANDO O ![GET](https://img.shields.io/badge/GET-purple.svg)
-## PARA PESQUISAR TODOS OS LIVROS QUE EXISTEM??
-- ROTA PARA VER OS LIVROS
+# Usando o ![get](https://img.shields.io/badge/get-purple.svg)
+## para pesquisar todos os livros que existem??
+- rota para ver os livros
 ```http
 localhost:3000/livros
 ```
-- VOCÊ DEVE VER ALGO DO TIPO
+- você deve ver algo do tipo
 ```json
 [
   {
     "id": 1,
-    "titulo": "O senhor dos aneis ",
-    "autorId": null,
-    "autorUrl": null,
+    "titulo": "o senhor dos aneis ",
+    "autorid": null,
+    "autorurl": null,
     "url": "http://localhost:3000/livros/1",
-    "capaURL": "https://images-na.ssl-images-amazon.com/images/I/81lQ5N0QwJL.jpg"
+    "capaurl": "https://images-na.ssl-images-amazon.com/images/i/81lq5n0qwjl.jpg"
   },
   {
     "id": 2,
-    "titulo": "Ensaio sobre a Segueira ",
-    "autorId": 3,
-    "autorUrl": "http://localhost:3000/autores/3",
+    "titulo": "ensaio sobre a segueira ",
+    "autorid": 3,
+    "autorurl": "http://localhost:3000/autores/3",
     "url": "http://localhost:3000/livros/2",
-    "capaURL": "https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2016/12/livro11.jpg"
+    "capaurl": "https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2016/12/livro11.jpg"
   },
   {
     "id": 3,
-    "titulo": "Ensaio sobre a Segueira ",
-    "autorId": 3,
-    "autorUrl": "http://localhost:3000/autores/3",
+    "titulo": "ensaio sobre a segueira ",
+    "autorid": 3,
+    "autorurl": "http://localhost:3000/autores/3",
     "url": "http://localhost:3000/livros/3",
-    "capaURL": "https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2016/12/livro11.jpg"
+    "capaurl": "https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2016/12/livro11.jpg"
   },
   {
     "id": 4,
-    "titulo": "Ensaio sobre a Lucidez ",
-    "autorId": 3,
-    "autorUrl": "http://localhost:3000/autores/3",
+    "titulo": "ensaio sobre a lucidez ",
+    "autorid": 3,
+    "autorurl": "http://localhost:3000/autores/3",
     "url": "http://localhost:3000/livros/4",
-    "capaURL": "https://livrariataverna.com.br/2636/ensaio-sobre-a-lucidez-jose-saramago.jpg"
+    "capaurl": "https://livrariataverna.com.br/2636/ensaio-sobre-a-lucidez-jose-saramago.jpg"
   }
 ]
 ```
-- ROTA PARA PEGAR UM LIVRO EXISTENTE
+- rota para pegar um livro existente
 ```json 
 localhost:3000/livros/1
 ```
-- O RESULTADO DEVE SER ESSE
+- o resultado deve ser esse
 ```json
 {
-    "id": 1,
-    "titulo": "O senhor dos aneis ",
-    "autorId": null,
-    "autorUrl": null,
-    "url": "http://localhost:3000/livros/1",
-    "capaURL": "https://images-na.ssl-images-amazon.com/images/I/81lQ5N0QwJL.jpg"
- }
+  "id": 1,
+  "titulo": "o senhor dos aneis ",
+  "capaurl": "https://images-na.ssl-images-amazon.com/images/i/81lq5n0qwjl.jpg",
+  "preco": 70,
+  "generos": [
+    "romance",
+    "fantasia"
+  ],
+  "autor": {
+    "autorid": 1,
+    "nome": "jrr tolkien",
+    "nacionalidade:": "britanico"
+  }
+}
 ```
-### BOM! AGORA QUE JÁ SABEMOS QUAIS OS LIVROS QUE EXISTEM, EU QUERO SABER, COMO QUE EU INSIRO MAIS LIVROS??
- # USANDO O ![POST](https://img.shields.io/badge/POST-green.svg)
- - ROTA PARA INSERIR UM NOVO LIVRO
+### bom! agora que já sabemos quais os livros que existem, eu quero saber, como que eu insiro mais livros?
+ # usando o ![post](https://img.shields.io/badge/post-green.svg)
+ - rota para inserir um novo livro
  ```http
  localhost:3000/livros
  ```
- - LIVRO A SER INSERIDO. LEMBRA QUE EU DISSE QUE USARIAMOS O AUTOR!? Osamu Tezuka É O ID 7 PRA MIM
- - QUAL O GENERO DO LIVRO? ACHO QUE É AÇÃO E AVENTURA QUAL O ID DELES?? 4 e 5
- - capaURL É UMA IMAGEM DA INTERNET
+ - livro a ser inserido. lembra que eu disse que usariamos o autor!? Osamu Tezuka é o id 7 para mim
+ - qual o genero do livro? acho que é ação e aventura qual o id deles?? 4 e 5
+ - capaurl é uma imagem da internet
  ```json
  {
-    "titulo": "Astro Boy",
+    "titulo": "astro boy",
     "preco": 35,
-    "autorId": 7,
+    "autorid": 7,
     "generos": [4,5],
-    "capaURL": "https://th.bing.com/th/id/OIP.6Miup3mOMLt7UwJ9hhVo7gHaJq?pid=ImgDet&rs=1"
+    "capaurl": "https://th.bing.com/th/id/oip.6miup3momlt7uwj9hhvo7ghajq?pid=imgdet&rs=1"
 }
  ```
- - VOCÊ DEVE VER ALGO DO TIPO
+ - você deve ver algo do tipo
  ```json
   {
     "id": 5
-    "titulo": "Astro Boy",
+    "titulo": "astro boy",
     "preco": 35,
-    "autorId": 7,
+    "autorid": 7,
     "generos":[4,5],
-    "capaURL": "https://th.bing.com/th/id/OIP.6Miup3mOMLt7UwJ9hhVo7gHaJq?pid=ImgDet&rs=1"
-    "updatedAt": "2021-07-29T07:36:27.141Z",
-    "createdAt": "2021-07-29T07:36:27.141Z"
+    "capaurl": "https://th.bing.com/th/id/oip.6miup3momlt7uwj9hhvo7ghajq?pid=imgdet&rs=1"
+    "updatedat": "2021-07-29t07:36:27.141z",
+    "createdat": "2021-07-29t07:36:27.141z"
 }
  ```
- ### ÉÉÉ, ACHOU QUE EU IA ERRAR, NÉ? AGORA EU ESCREVI TUDO CERTINHO!
- ### MAS O PREÇO FOI ATUALIZADO AGORA A POUCO
- ### VAMOS ATUALIZAR O PREÇO DELE ENTÃO
- #USANDO O ![PUT](https://img.shields.io/badge/PUT-orange.svg)
- - ROTA PARA ATUALIZAR O LIVRO
+
+ ### vamos atualizar o preço dele então
+ #usando o ![put](https://img.shields.io/badge/put-orange.svg)
+ - rota para atualizar o livro
  ```http
  localhost:3000/livros
  ```
- - LIVRO COM PREÇO ATUALIZADO
+ - livro com preço atualizado
  ```json
  {
     "id": 5
-    "titulo": "Astro Boy",
+    "titulo": "astro boy",
     "preco": 37.79,
-    "autorId": 7,
+    "autorid": 7,
     "generos":[4,5],
-    "capaURL": "https://th.bing.com/th/id/OIP.6Miup3mOMLt7UwJ9hhVo7gHaJq?pid=ImgDet&rs=1"
+    "capaurl": "https://th.bing.com/th/id/oip.6miup3momlt7uwj9hhvo7ghajq?pid=imgdet&rs=1"
  }
  ```
- ### PRONTO! AGORA SE QUISER, VAMOS DELETAR!
- # USANDO O ![DELETE](https://img.shields.io/badge/DELETE-red.svg)
- - ROTA QUE VAMOS USAR PARA DELETAR O LIVRO
+ ### pronto! Agora se quiser, vamos deletar!
+ # usando o ![delete](https://img.shields.io/badge/delete-red.svg)
+ - rota que vamos usar para deletar o livro
  ```http
  localhost:3000/livros/5
  ```
- #### É, ACREDITO QUE ELE FOI DELETADO!
- #### GOSTOU!?? CONHEÇA MAIS SOBRE A GENTE, É SÓ DESCER MAIS UM POUCO!
+ #### Com isso o livro foi deletado! Também os campos referentes a esse livro também são excluidos da tabela intermediaria Generos_Livros 
+ 
+ #### gostou!?? conheça mais sobre a gente, é só descer mais um pouco!
 
 #
-## ![github_devs](https://img.shields.io/badge/GITHUB_DEVS-100000?style=for-the-badge&logo=github&logoColor=white)
+## ![github_devs](https://img.shields.io/badge/github_devs-100000?style=for-the-badge&logo=github&logocolor=white)
 - [arturacm](https://github.com/arturacm)
 - [galvaonana](https://github.com/galvaonana)
-- [MarcosCabral](https://github.com/MarcosCabral93)
-- [PATOLINODD](https://github.com/PATOLINODD) 
+- [marcoscabral](https://github.com/marcoscabral93)
+- [patolinodd](https://github.com/patolinodd) 
 - [verginia-fleitas](https://github.com/verginia-fleitas)
+
 
 
